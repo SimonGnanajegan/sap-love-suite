@@ -86,6 +86,8 @@
     }
 
     .action-buttons {
+        display: flex;
+        justify-content: center;
         gap: 2rem;
         min-height: 60px;
         position: relative; // Context for absolute button
