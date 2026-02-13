@@ -1,0 +1,17 @@
+@if (auth.isAuthenticated()) {
+  <app-header></app-header>
+}
+
+@if (auth.isAuthenticated()) {
+  <div class="watermark">Mu ❤️ Boo | 144</div>
+}
+
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>
+
+@if (auth.isAuthenticated()) {
+  <footer class="love-footer">
+    LOMS v1.4.4 | Built with 1233 days of love.
+  </footer>
+}

@@ -1,0 +1,58 @@
+.chat-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #2b2b2b;
+    min-height: calc(100vh - 64px);
+}
+
+.terminal-card {
+    width: 600px;
+    max-width: 95%;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Fira Code', monospace;
+
+    mat-card-header {
+        background: #333;
+        color: white;
+        padding: 1rem;
+        border-bottom: 1px solid #444;
+    }
+}
+
+.terminal-window {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.log-entry {
+    margin-bottom: 0.5rem;
+
+    .timestamp {
+        color: #569cd6; // VS Code Blue
+        margin-right: 0.5rem;
+    }
+
+    .message {
+        color: #ce9178; // VS Code String Color
+    }
+}
+
+.system-message {
+    margin-top: 2rem;
+    color: #4ec9b0; // VS Code Class Color
+    font-weight: bold;
+}
+
+.cursor {
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

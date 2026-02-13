@@ -1,0 +1,18 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --sap-blue: #0a6ed1;
+  --sap-bg: #f5f7fa;
+  --sap-text: #32363a;
+  --sap-white: #ffffff;
+  --love-pink: #e91e63;
+  --love-accent: #fce4ec;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: var(--sap-bg);
+  color: var(--sap-text);
+  margin: 0;
+  padding: 0;
+}

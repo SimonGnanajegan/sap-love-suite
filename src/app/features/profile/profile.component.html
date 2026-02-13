@@ -1,0 +1,43 @@
+<div class="profile-container">
+  <mat-card class="profile-card">
+    <div class="header-section">
+      <div class="avatar-section">
+        <mat-icon class="profile-avatar">account_circle</mat-icon>
+      </div>
+      <div class="title-section">
+        <h2>Customer Master Record</h2>
+        <p>Love Order Management System (LOMS) - MDM</p>
+      </div>
+      <div class="toggle-section">
+        <span>Technical View</span>
+        <mat-slide-toggle [(ngModel)]="isTechnicalView"></mat-slide-toggle>
+      </div>
+    </div>
+
+    <mat-card-content>
+      @if (!isTechnicalView()) {
+        <mat-list>
+          @for (item of profileData; track item.label) {
+            <mat-list-item>
+              <span matListItemTitle>{{ item.label }}</span>
+              <span matListItemLine class="value-text">{{ item.value }}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          }
+        </mat-list>
+      } @else {
+        <div class="technical-view">
+          @for (item of technicalData; track item.label) {
+            <div class="tech-item">
+              <mat-icon>{{ item.icon }}</mat-icon>
+              <div class="tech-info">
+                <span class="label">{{ item.label }}</span>
+                <span class="value">{{ item.value }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </mat-card-content>
+  </mat-card>
+</div>

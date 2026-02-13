@@ -1,0 +1,29 @@
+<div class="dashboard-container">
+  <div class="launchpad-header">
+    <h2>Order Overview</h2>
+    <p>Love Order Management System (LOMS) - Order #144</p>
+  </div>
+
+  <mat-grid-list cols="4" rowHeight="180px" gutterSize="16px">
+    @for (tile of tiles; track tile.title) {
+      <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [routerLink]="tile.route">
+        <mat-card class="fiori-tile" [style.background-color]="tile.color || '#ffffff'">
+          <mat-card-header>
+            <mat-card-title>{{ tile.title }}</mat-card-title>
+            <mat-card-subtitle>{{ tile.subtitle }}</mat-card-subtitle>
+          </mat-card-header>
+          
+          <mat-card-content class="tile-content">
+            <div class="kpi-value">
+              @if (tile.value) {
+                <span class="value">{{ tile.value }}</span>
+                <span class="unit">{{ tile.unit }}</span>
+              }
+            </div>
+            <mat-icon class="tile-icon">{{ tile.icon }}</mat-icon>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    }
+  </mat-grid-list>
+</div>

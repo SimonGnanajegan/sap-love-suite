@@ -1,0 +1,71 @@
+<div class="order-container">
+  <!-- Order Header -->
+  <mat-card class="order-header-card">
+    <div class="header-row">
+      <div class="header-title">
+        <h1>Order #{{ orderDetails.id }}</h1>
+        <mat-chip-set>
+          <mat-chip color="accent" selected>{{ orderDetails.priority }}</mat-chip>
+          <mat-chip>{{ orderDetails.status }}</mat-chip>
+        </mat-chip-set>
+      </div>
+      <div class="header-actions">
+        <!-- Placeholder for actions -->
+      </div>
+    </div>
+    
+    <div class="order-info-grid">
+      <div class="info-item">
+        <label>Customer Name</label>
+        <span>{{ orderDetails.customer }}</span>
+      </div>
+      <div class="info-item">
+        <label>Created By</label>
+        <span>{{ orderDetails.creator }}</span>
+      </div>
+      <div class="info-item">
+        <label>Order Date</label>
+        <span>{{ orderDetails.date }}</span>
+      </div>
+      <div class="info-item">
+        <label>Order Type</label>
+        <span>{{ orderDetails.type }}</span>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Line Items -->
+  <mat-card class="line-items-card">
+    <mat-card-header>
+      <mat-card-title>📦 Order Line Items</mat-card-title>
+    </mat-card-header>
+    
+    <table mat-table [dataSource]="lineItems" class="sap-table">
+      
+      <!-- Item Column -->
+      <ng-container matColumnDef="item">
+        <th mat-header-cell *matHeaderCellDef> Item </th>
+        <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+      </ng-container>
+  
+      <!-- Quantity Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+      </ng-container>
+  
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> 
+          <span class="status-badge" [class.active]="element.status === 'Active'" [class.pending]="element.status === 'Pending Approval'">
+            {{element.status}}
+          </span>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+</div>

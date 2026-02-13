@@ -1,0 +1,51 @@
+<div class="puzzle-container">
+  
+  @switch (accessState()) {
+    
+    @case ('denied') {
+      <div class="error-screen">
+        <mat-icon class="error-icon">gpp_maybe</mat-icon>
+        <h1>403 Forbidden</h1>
+        <p>You are not authorized to access this object.</p>
+        <p class="role-required">Role Required: <strong>LOVER_ADMIN</strong></p>
+        
+        <button mat-raised-button color="warn" (click)="requestAuthorization()">
+          Request Authorization
+        </button>
+      </div>
+    }
+
+    @case ('quiz') {
+      <mat-card class="quiz-card">
+        <mat-card-header>
+          <mat-card-title>Security Verification</mat-card-title>
+          <mat-card-subtitle>Question {{ currentQuestionIndex() + 1 }} / {{ questions.length }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <h3>{{ questions[currentQuestionIndex()].text }}</h3>
+          <mat-radio-group class="quiz-options" [(ngModel)]="selectedOption">
+             @for (opt of questions[currentQuestionIndex()].options; track opt) {
+               <mat-radio-button [value]="opt">{{ opt }}</mat-radio-button>
+             }
+          </mat-radio-group>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-flat-button color="primary" (click)="submitAnswer()">Verify Answer</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+
+    @case ('granted') {
+      <div class="success-screen">
+        <mat-icon class="success-icon">lock_open</mat-icon>
+        <h1>Authorization Granted</h1>
+        <p>Accessing Core Emotional Database...</p>
+        
+        <div class="secret-message">
+           <p>“You are the best thing that ever happened to me 💖”</p>
+        </div>
+      </div>
+    }
+
+  }
+</div>

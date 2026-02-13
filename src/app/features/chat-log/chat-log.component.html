@@ -1,0 +1,22 @@
+<div class="chat-container">
+  <mat-card class="terminal-card">
+    <mat-card-header>
+      <mat-card-title>Internal Communication Log</mat-card-title>
+      <mat-card-subtitle>Secure Channel: Mu ↔ Boo</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="terminal-window">
+        @for (log of logs; track log.id) {
+          <div class="log-entry">
+            <span class="timestamp">[LOG {{ log.id }}]</span>
+            <span class="message">{{ log.message }}</span>
+          </div>
+        }
+        <div class="system-message">
+          > System Message: Boo is Mu’s Forever Person ❤️<span class="cursor">|</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

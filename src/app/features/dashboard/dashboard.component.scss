@@ -1,0 +1,81 @@
+.dashboard-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.launchpad-header {
+    margin-bottom: 1.5rem;
+
+    h2 {
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: #333;
+    }
+}
+
+.fiori-tile {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white; // Default tile color
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-color: var(--sap-blue);
+    }
+
+    mat-card-header {
+        padding: 16px 16px 0 16px;
+    }
+
+    mat-card-title {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+
+    mat-card-subtitle {
+        font-size: 0.8rem;
+        color: #666;
+    }
+
+    .tile-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 1rem;
+        flex-grow: 1;
+
+        .kpi-value {
+            display: flex;
+            flex-direction: column;
+
+            .value {
+                font-size: 2.2rem;
+                font-weight: 300;
+                color: #333;
+            }
+
+            .unit {
+                font-size: 0.9rem;
+                color: #666;
+            }
+        }
+
+        .tile-icon {
+            font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            color: var(--sap-blue);
+            opacity: 0.8;
+        }
+    }
+}

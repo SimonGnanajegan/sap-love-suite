@@ -1,0 +1,64 @@
+<div class="analytics-container">
+  <header>
+    <h1>Love Analytics Dashboard</h1>
+    <p>Corporate Overview of Relationship Performance</p>
+  </header>
+
+  <div class="kpi-row">
+    <mat-card class="kpi-card">
+      <mat-card-header>
+        <mat-card-subtitle>Growth Rate</mat-card-subtitle>
+        <mat-card-title class="positive">+999%</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+
+    <mat-card class="kpi-card">
+      <mat-card-header>
+        <mat-card-subtitle>Conflict Rate</mat-card-subtitle>
+        <mat-card-title class="neutral">0%</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+
+    <mat-card class="kpi-card">
+      <mat-card-header>
+        <mat-card-subtitle>Smile Frequency</mat-card-subtitle>
+        <mat-card-title class="info">87 / day</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+
+     <mat-card class="kpi-card">
+      <mat-card-header>
+        <mat-card-subtitle>Cuteness Index</mat-card-subtitle>
+        <mat-card-title class="critical">Critical High ⚠️</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+
+  <div class="charts-row">
+    <mat-card class="chart-card">
+      <mat-card-header>
+        <mat-card-title>Historical Analysis</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <canvas baseChart
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [type]="barChartType">
+        </canvas>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="chart-card">
+      <mat-card-header>
+        <mat-card-title>Component Distribution</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <canvas baseChart
+          [data]="pieChartData"
+          [options]="pieChartOptions"
+          [type]="pieChartType">
+        </canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

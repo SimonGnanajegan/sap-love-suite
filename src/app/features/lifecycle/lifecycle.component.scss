@@ -1,0 +1,78 @@
+.lifecycle-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: #666;
+        font-size: 0.9rem;
+    }
+}
+
+.filter-dropdown {
+    min-width: 200px;
+}
+
+.sap-table {
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+}
+
+.milestone-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    mat-icon {
+        font-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        color: var(--sap-blue);
+    }
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+
+    &.ongoing {
+        background-color: #e3f2fd;
+        color: #1565c0;
+    }
+}
+
+.heart-pulse {
+    color: #e91e63;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

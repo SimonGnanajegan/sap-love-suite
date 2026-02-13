@@ -1,0 +1,76 @@
+<div class="delivery-container">
+  <div class="header">
+    <h2>Delivery Module</h2>
+    <p>Manage saved addresses and special delivery routes.</p>
+  </div>
+
+  <mat-tab-group mat-stretch-tabs="false" animationDuration="0ms" class="loms-tabs">
+    
+    <!-- Tab 1: Saved Address -->
+    <mat-tab label="Primary Delivery Address">
+      <div class="tab-content">
+        <mat-card class="address-card">
+          <mat-card-header>
+            <mat-icon mat-card-avatar>home_pin</mat-icon>
+            <mat-card-title>Kovalam Muttukadu Bridge</mat-card-title>
+            <mat-card-subtitle>Memory Zone – Sunset Department</mat-card-subtitle>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-content class="address-details">
+            <p><strong>Recipient:</strong> Mu & Boo</p>
+            <p><strong>Address Type:</strong> Romantic Infrastructure</p>
+            <div class="special-instructions">
+              <strong>Special Instructions:</strong>
+              <p>Hold hands. Don’t let go. 🤝❤️</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-stroked-button color="primary" (click)="viewArchive()">View Memory Archive</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <!-- Tab 2: Special Delivery -->
+    <mat-tab label="Special Express Delivery">
+      <div class="tab-content">
+        <mat-card class="route-card">
+          <div class="route-header">
+            <h3>Mission 144: Coastal Route</h3>
+            <span class="status-tag">Successfully Delivered</span>
+          </div>
+
+          <div class="route-details">
+            <div class="detail-item">
+              <span class="label">Route</span>
+              <span class="value">Tirunelveli ➝ Kanyakumari</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Distance Covered</span>
+              <span class="value">❤️</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Fuel</span>
+              <span class="value">100% Love</span>
+            </div>
+          </div>
+
+          <div class="bike-animation-container">
+             <div class="bike-track">
+               <div class="bike-icon" [style.left.%]="bikeTripProgress()">🏍️</div>
+             </div>
+             <mat-progress-bar mode="determinate" [value]="bikeTripProgress()"></mat-progress-bar>
+          </div>
+
+          <div class="report-footer">
+            <p>"Most beautiful shipment of my life 💙"</p>
+             <button mat-flat-button color="accent" (click)="startBikeRide()" [disabled]="isRiding()">
+               {{ isRiding() ? 'Delivering...' : 'Re-experience Delivery' }}
+             </button>
+          </div>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>

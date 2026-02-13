@@ -1,0 +1,54 @@
+<div class="geo-container">
+  <mat-card class="tracking-card">
+    <div class="tracking-header">
+      <div class="header-info">
+        <h3>Love Shipment Tracking</h3>
+        <span class="tracking-id">Tracking ID: {{ trackingId }}</span>
+      </div>
+      <mat-icon class="truck-icon">local_shipping</mat-icon>
+    </div>
+
+    <!-- Progress Bar Section -->
+    <div class="route-progress">
+      <div class="location from">
+        <span class="city">Tirunelveli</span>
+        <span class="person">Simu</span>
+      </div>
+      
+      <div class="progress-track">
+        <div class="progress-fill">
+          <div class="heartbeat-pulse">❤️</div>
+        </div>
+      </div>
+
+      <div class="location to">
+        <span class="city">Chennai</span>
+        <span class="person">Rish</span>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="tracking-timeline">
+      @for (event of timelineEvents; track event.status) {
+        <div class="timeline-item" [class.completed]="event.completed" [class.current]="event.current">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="status">{{ event.status }}</span>
+            <span class="date">{{ event.date }}</span>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="distance-stats">
+      <div class="stat-item">
+        <span class="label">Physical Distance</span>
+        <span class="value">623 km</span>
+      </div>
+      <div class="stat-item highlight">
+        <span class="label">Emotional Distance</span>
+        <span class="value">0 km 💙</span>
+      </div>
+    </div>
+  </mat-card>
+</div>

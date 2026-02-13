@@ -1,0 +1,28 @@
+<div class="game-container">
+  <h1>Emotional Support Tool</h1>
+  <p>Status: Catch Love Packets to verify system stability.</p>
+
+  <div class="canvas-wrapper">
+    <canvas #gameCanvas (mousemove)="movePaddle($event)"></canvas>
+    
+    @if (gameStatus() === 'start') {
+      <div class="overlay">
+        <h2>Ready to Stabilize Love Levels?</h2>
+        <button mat-raised-button color="primary" (click)="startGame()">Initialize Protocol</button>
+      </div>
+    }
+
+    @if (gameStatus() === 'won') {
+      <div class="overlay success">
+        <mat-icon class="large-icon">check_circle</mat-icon>
+        <h2>System Stable. Love Levels Optimal 💙</h2>
+        <p>Score: {{ score() }}</p>
+        <button mat-stroked-button (click)="startGame()">Run Diagnostics Again</button>
+      </div>
+    }
+
+    <div class="score-board">
+      Score: {{ score() }} / 10
+    </div>
+  </div>
+</div>

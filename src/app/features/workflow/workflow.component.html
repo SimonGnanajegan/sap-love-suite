@@ -1,0 +1,59 @@
+<div class="workflow-container">
+  
+  <mat-card class="proposal-card" [class.approved-border]="isApproved()">
+    <div class="sap-header-strip"></div>
+    
+    <mat-card-header>
+      <div mat-card-avatar class="sap-logo-placeholder"><mat-icon>approval</mat-icon></div>
+      <mat-card-title>Approval Queue – Order #LUV-144</mat-card-title>
+      <mat-card-subtitle>Pending Exec Sign-off</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="proposal-details">
+        <div class="detail-row">
+          <span class="label">Order ID:</span>
+          <span class="value">LUV-144</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Created By:</span>
+          <span class="value">Simu</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Customer:</span>
+          <span class="value">Rish</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Duration:</span>
+          <span class="value">Lifetime Subscription</span>
+        </div>
+        
+        <hr/>
+        
+        <p class="description">
+          Action Required: Approve creation of "Forever Together" binding contract.
+          <br>
+          <em>Note: This action cannot be undone (and you wouldn't want to).</em>
+        </p>
+      </div>
+
+      @if (isApproved()) {
+        <div class="success-message">
+          <mat-icon class="check-icon">check_circle</mat-icon>
+          <h2>Order Confirmed! 🚀</h2>
+          <p>Status Updated: <strong>Forever Together</strong></p>
+          <p class="final-note">"System successfully deployed to your heart."</p>
+        </div>
+      }
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      @if (!isApproved()) {
+        <button mat-button color="warn" (click)="rejectProposal()">Reject ❌</button>
+        <button mat-raised-button color="primary" (click)="approveProposal()">Approve Order ✅</button>
+      } @else {
+         <button mat-stroked-button disabled>Signed & Sealed 🔒</button>
+      }
+    </mat-card-actions>
+  </mat-card>
+</div>

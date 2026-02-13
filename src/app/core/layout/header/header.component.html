@@ -1,0 +1,24 @@
+<mat-toolbar class="sap-fiori-header">
+  <div class="start-section">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="sap-logo.png" alt="SAP Logo" class="sap-logo" (click)="handleLogoClick()">
+  </div>
+  
+  <span class="spacer"></span>
+  
+  <div class="logo-group" (click)="handleLogoClick()">
+    <span class="logo-text">SAP LoveSuite 2026</span>
+    <span class="uptime-badge">Running: {{ loveService.daysTogether() }} Days</span>
+  </div>
+  
+  <span class="spacer"></span>
+
+  <div class="user-actions">
+    <span class="user-name">Welcome, {{ auth.currentUser() }}</span>
+    <button mat-icon-button (click)="auth.logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

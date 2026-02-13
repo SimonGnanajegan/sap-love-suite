@@ -1,0 +1,110 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.profile-card {
+    width: 700px;
+    max-width: 95%;
+    border-radius: 4px; // Enterprise sharp corners
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #0a6ed1; // SAP Blue Accent
+    background: #fff;
+    gap: 1.5rem;
+
+    .profile-avatar {
+        font-size: 5rem;
+        width: 5rem;
+        height: 5rem;
+        color: #354a5f;
+    }
+
+    .title-section {
+        flex: 1;
+
+        h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .toggle-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 0.75rem;
+        color: #888;
+        gap: 0.5rem;
+    }
+}
+
+.value-text {
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+}
+
+mat-list-item {
+    height: auto !important;
+    padding: 0.75rem 1rem !important;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+}
+
+.technical-view {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: #2b3a42; // Dark theme for tech view
+        border-radius: 4px;
+        color: #fff;
+
+        mat-icon {
+            color: #4caf50;
+        }
+
+        .tech-info {
+            display: flex;
+            flex-direction: column;
+
+            .label {
+                font-size: 0.7rem;
+                color: #bdc3c7;
+                text-transform: uppercase;
+            }
+
+            .value {
+                font-weight: bold;
+                font-family: monospace;
+                color: #ecf0f1;
+            }
+        }
+    }
+}

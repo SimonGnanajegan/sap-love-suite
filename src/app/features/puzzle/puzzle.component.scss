@@ -1,0 +1,65 @@
+.puzzle-container {
+    height: calc(100vh - 64px); // Adjust for header
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.error-screen,
+.success-screen {
+    text-align: center;
+
+    .error-icon {
+        font-size: 5rem;
+        width: 5rem;
+        height: 5rem;
+        color: #f44336; // Red
+        margin-bottom: 1rem;
+    }
+
+    .success-icon {
+        font-size: 5rem;
+        width: 5rem;
+        height: 5rem;
+        color: #4caf50; // Green
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .role-required {
+        margin-bottom: 2rem;
+        color: #666;
+    }
+
+    .secret-message {
+        margin-top: 2rem;
+        padding: 2rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        p {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #e91e63;
+        }
+    }
+}
+
+.quiz-card {
+    width: 500px;
+    max-width: 90%;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
