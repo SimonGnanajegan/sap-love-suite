@@ -1,0 +1,46 @@
+<div class="decision-container">
+  
+  @if (isLoading()) {
+    <div class="loader-overlay">
+      <div class="spinner"></div>
+      <p class="loading-text">{{ loadingText() }}</p>
+    </div>
+  }
+
+  @if (showQuestion()) {
+    <mat-card class="question-card">
+      <div class="sap-header-strip"></div>
+      
+      <mat-card-header>
+        <div mat-card-avatar class="sap-logo-placeholder"><mat-icon>favorite</mat-icon></div>
+        <mat-card-title>Action Required – Customer Confirmation ✨⚡️</mat-card-title>
+        <mat-card-subtitle>Manual Response Required from: <strong>Rish</strong></mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="question-content">
+        <h1>Will you be my Valentine? 🌹</h1>
+        <p class="subtext">Please choose carefully. This action cannot be undone.</p>
+        
+        <div class="warning-box">
+          <mat-icon>warning</mat-icon>
+          <span>System detected compatibility match: 100%. Refusal may cause system crash.</span>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions align="center" class="action-buttons">
+        <button mat-raised-button color="primary" class="yes-btn" (click)="onYesClick()" 
+                matTooltip="Recommended option by system AI">
+          Yes ❤️
+        </button>
+        
+        <button mat-stroked-button color="warn" class="no-btn" 
+                [ngStyle]="noBtnStyle()" 
+                (mouseover)="onNoHover()" 
+                (click)="onNoClick()">
+          {{ noBtnText() }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  }
+
+</div>

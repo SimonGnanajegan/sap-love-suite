@@ -26,5 +26,6 @@ export const routes: Routes = [
   { path: 'geo-sync', component: GeoSyncComponent },
   { path: 'memories', component: MemoriesComponent },
   { path: 'chat-log', component: ChatLogComponent },
+  { path: 'decision', loadComponent: () => import('./features/decision/decision.component').then(m => m.DecisionComponent) }
   // Future phases will be added here
 ];

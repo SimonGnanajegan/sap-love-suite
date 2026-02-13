@@ -18,8 +18,8 @@ export class ProfileComponent {
 
   profileData = [
     { label: 'Customer Name', value: 'Rish' },
-    { label: 'Nickname', value: 'Boo' },
-    { label: 'Registered Partner', value: 'Mu' },
+    { label: 'Nickname', value: 'Boo ⚡️' },
+    { label: 'Registered Partner', value: 'Mu ✨' },
     { label: 'Customer Since', value: 'Sep 29, 2022' },
     { label: 'Loyalty Tier', value: 'Diamond Forever 💎' },
     { label: 'Preferred Vendor', value: 'Simu' },

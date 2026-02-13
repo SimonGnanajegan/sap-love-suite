@@ -34,6 +34,7 @@ export class DashboardComponent {
     { title: 'Special Delivery', subtitle: 'Bike Trip', icon: 'two_wheeler', route: '/memories', value: 'Delivered', unit: '', cols: 1, rows: 1, color: '#f3e5f5' },
     { title: 'Approval Queue', subtitle: 'Final Proposal', icon: 'verified', route: '/workflow', value: 'Pending', unit: 'Action', cols: 2, rows: 1, color: '#e8eaf6' },
     { title: 'Customer Master', subtitle: 'Rish Profile', icon: 'account_circle', route: '/profile', value: 'Diamond', unit: '', cols: 1, rows: 1, color: '#fff8e1' },
+    { title: 'Customer Action', subtitle: 'Action Required', icon: 'campaign', route: '/decision', value: '1', unit: 'Alert', cols: 2, rows: 1, color: '#f8bbd0' },
     { title: 'System Logs', subtitle: 'Chat History', icon: 'terminal', route: '/chat-log', value: 'Secure', unit: '', cols: 1, rows: 1, color: '#eceff1' }
   ];
 

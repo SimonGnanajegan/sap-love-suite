@@ -1,0 +1,108 @@
+.decision-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px);
+    background-color: #fce4ec; // Soft pink background
+    position: relative;
+    overflow: hidden;
+}
+
+// Loader Styling
+.loader-overlay {
+    text-align: center;
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #fff;
+        border-top: 5px solid #e91e63;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1.5rem;
+    }
+
+    .loading-text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        color: #880e4f;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Card Styling
+.question-card {
+    width: 600px;
+    max-width: 90%;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: visible; // Allow button to fly out if needed
+
+    .sap-header-strip {
+        height: 6px;
+        background: linear-gradient(90deg, #ff4081, #d500f9);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .question-content {
+        margin: 2rem 0;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtext {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .warning-box {
+            margin-top: 1.5rem;
+            background: #fff3e0;
+            padding: 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #e65100;
+            font-size: 0.9rem;
+        }
+    }
+
+    .action-buttons {
+        gap: 2rem;
+        min-height: 60px;
+        position: relative; // Context for absolute button
+
+        button {
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+        }
+
+        .yes-btn {
+            background-color: #e91e63;
+            color: white;
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

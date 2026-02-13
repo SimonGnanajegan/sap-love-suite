@@ -18,7 +18,7 @@ export class GeoSyncComponent implements OnDestroy {
     { status: 'Packed with Emotions ❤️', date: 'Feb 14, 2023', completed: true },
     { status: 'Out for Delivery 🏍', date: 'Processing', completed: true },
     { status: 'Waiting at Kovalam Bridge 🌊', date: 'Transit Point', completed: true },
-    { status: 'Delivered to Boo’s Heart 💘', date: 'Estimated: Forever', completed: false, current: true }
+    { status: 'Delivered to Boo’s ⚡️ Heart 💘', date: 'Estimated: Forever', completed: false, current: true }
   ];
 
   heartbeat = signal('active');
