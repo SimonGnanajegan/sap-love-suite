@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, signal, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, signal, OnDestroy, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -99,6 +99,21 @@ export class MusicPlayerComponent implements AfterViewInit, OnDestroy {
       console.warn('Player not ready');
       // Retry init if player is missing
       if (!this.player) this.initPlayer();
+    }
+  }
+
+  // Global listener to ensure music starts on first interaction if blocked
+  @HostListener('document:click')
+  @HostListener('document:touchstart')
+  ensurePlayback() {
+    if (this.player && typeof this.player.getPlayerState === 'function') {
+      const state = this.player.getPlayerState();
+      // If unstarted (-1), cued (5), or paused (2) and we want it to autoplay
+      if (state === -1 || state === 5 || state === 2) {
+        if (!this.isPlaying()) {
+          this.player.playVideo();
+        }
+      }
     }
   }
 
