@@ -40,7 +40,7 @@ export class AnalyticsComponent {
   public pieChartData: ChartData<'pie'> = {
     labels: ['Happiness', 'Cuteness', 'Romance', 'Support'],
     datasets: [ {
-      data: [0.4, 0.3, 99, 0.3],
+      data: [10, 10, 70, 10],
       backgroundColor: ['#FCCDE2', '#e91e63', '#880e4f', '#fce4ec']
     } ]
   };

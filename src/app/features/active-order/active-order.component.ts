@@ -20,7 +20,7 @@ export class ActiveOrderComponent {
     date: 'Sep 29, 2022',
     type: 'Lifetime Partnership',
     priority: 'Critical ❤️',
-    status: 'In Progress (1233 Days Running)'
+    status: 'In Progress (1234 Days Running)'
   };
 
   displayedColumns = ['item', 'quantity', 'status'];

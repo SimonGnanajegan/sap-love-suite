@@ -28,13 +28,14 @@ interface Tile {
 export class DashboardComponent {
   tiles: Tile[] = [
     { title: 'Active Orders', subtitle: 'Our Love Order', icon: 'shopping_bag', route: '/active-order', value: '1', unit: 'Order', cols: 2, rows: 1, color: '#e3f2fd' },
-    { title: 'Order Analytics', subtitle: '1233 Days Data', icon: 'analytics', route: '/analytics', value: '100%', unit: 'Love', cols: 1, rows: 1, color: '#fff3e0' },
+    { title: 'Order Analytics', subtitle: '1234 Days Data', icon: 'analytics', route: '/analytics', value: '100%', unit: 'Love', cols: 1, rows: 1, color: '#fff3e0' },
     { title: 'Shipment Tracking', subtitle: 'Long Distance', icon: 'local_shipping', route: '/geo-sync', value: 'In Transit', unit: '', cols: 1, rows: 1, color: '#e8f5e9' },
     { title: 'Delivery Locations', subtitle: 'Kovalam Memory', icon: 'map', route: '/memories', value: 'Saved', unit: '', cols: 1, rows: 1, color: '#fce4ec' },
     { title: 'Special Delivery', subtitle: 'Bike Trip', icon: 'two_wheeler', route: '/memories', value: 'Delivered', unit: '', cols: 1, rows: 1, color: '#f3e5f5' },
     { title: 'Approval Queue', subtitle: 'Final Proposal', icon: 'verified', route: '/workflow', value: 'Pending', unit: 'Action', cols: 2, rows: 1, color: '#e8eaf6' },
     { title: 'Customer Master', subtitle: 'Rish Profile', icon: 'account_circle', route: '/profile', value: 'Diamond', unit: '', cols: 1, rows: 1, color: '#fff8e1' },
     { title: 'Customer Action', subtitle: 'Action Required', icon: 'campaign', route: '/decision', value: '1', unit: 'Alert', cols: 2, rows: 1, color: '#f8bbd0' },
+    { title: 'Future Orders', subtitle: 'Lifetime Backlog', icon: 'flight_takeoff', route: '/future-adventures', value: '5', unit: 'Planned', cols: 2, rows: 1, color: '#e3f2fd' },
     { title: 'System Logs', subtitle: 'Chat History', icon: 'terminal', route: '/chat-log', value: 'Secure', unit: '', cols: 1, rows: 1, color: '#eceff1' }
   ];
 

@@ -5,11 +5,12 @@ import { AuthService } from './core/services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { LoveService } from './core/services/love.service';
+import { MusicPlayerComponent } from './core/components/music-player/music-player.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, MusicPlayerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

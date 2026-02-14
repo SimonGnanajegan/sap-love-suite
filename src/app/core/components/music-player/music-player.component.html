@@ -1,0 +1,20 @@
+<div class="music-player-container" [class.playing]="isPlaying()">
+  <!-- Hidden YouTube Player Container -->
+  <div id="youtube-player" style="display: none;"></div>
+
+  <div class="controls">
+    <button mat-icon-button (click)="togglePlay()" class="vinyl-btn">
+       <div class="vinyl-record" [class.spinning]="isPlaying()">
+          <div class="vinyl-center"></div>
+       </div>
+       <mat-icon class="control-icon">{{ isPlaying() ? 'pause' : 'play_arrow' }}</mat-icon>
+    </button>
+  </div>
+    
+  <div class="equalizer" *ngIf="isPlaying()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</div>

@@ -15,6 +15,6 @@ export class ChatLogComponent {
     { id: '001', message: 'Mu ✨ initiated conversation.', user: 'System' },
     { id: '144', message: 'Boo ⚡️ responded.', user: 'System' },
     { id: '365', message: 'Feelings detected.', user: 'System' },
-    { id: '1233', message: 'Love Confirmed.', user: 'System' }
+    { id: '1234', message: 'Love Confirmed.', user: 'System' }
   ];
 }
